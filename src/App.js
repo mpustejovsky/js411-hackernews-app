@@ -39,21 +39,21 @@ class App extends Component {
    if (typesearch==='1'){
      console.log("should set url")
 
-      url=`https://cors-anywhere.herokuapp.com/https://hn.algolia.com/api/v1/search_by_date?tags=story&numericFilters=created_at_i%3E${startD},created_at_i%3C${endD}`
+      url=`https://hn.algolia.com/api/v1/search_by_date?tags=story&numericFilters=created_at_i%3E${startD},created_at_i%3C${endD}`
    }
    if (typesearch==='3'&datesearch===0){
      console.log("keyword",keyword)
-    url=`http://hn.algolia.com/api/v1/search?query=${keyword}&tags=story`
+    url=`https://hn.algolia.com/api/v1/search?query=${keyword}&tags=story`
    }
 
    if (typesearch==='2'&datesearch===0){
     console.log("author",author)
-   url=`http://hn.algolia.com/api/v1/search?tags=story,author_${author}`
+   url=`https://hn.algolia.com/api/v1/search?tags=story,author_${author}`
   }
 
   if (typesearch==='2'&datesearch===1){
     console.log("author",author)
-   url=`https://cors-anywhere.herokuapp.com/https://hn.algolia.com/api/v1/search_by_date?tags=story,author_${author}&numericFilters=created_at_i%3E${startD},created_at_i%3C${endD}`
+   url=`https://hn.algolia.com/api/v1/search_by_date?tags=story,author_${author}&numericFilters=created_at_i%3E${startD},created_at_i%3C${endD}`
   }
 
 
